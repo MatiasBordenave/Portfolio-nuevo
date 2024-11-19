@@ -1,0 +1,462 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que quede encima de otros elementos */
+}
+
+body {
+  background: linear-gradient(45deg, #0b1416, #11292c, #1a3d41, #0f0f0f);
+  background-size: 300% 300%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+.imgMain{
+  height: 35em;
+}
+.divNav{
+  height: 3em;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+li{
+  padding-left: 1em;
+}
+
+
+ /* footer */
+ .footer{
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  margin-top: 2em;
+  }
+
+
+.footer_media>h3{
+  text-align: center;
+  background-color: #000;
+}
+
+.footer_media > div{
+  min-height: 4em;
+}
+.footer_media> div a>img{
+  width: 3.1em;
+  background-color: #000;
+}
+
+.copyRightP{
+  padding-top: 4.3em;
+  background-color: #000;
+}
+
+.bg-darkk{
+background-color: #000;
+}
+
+.iconSkills{
+  width: 5em;
+  height: 5em;
+}
+.iconNode{
+  height: 6em;
+}
+
+/* animacion skills */
+@keyframes fadeInUpSkills {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Comienza más abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Llega a su posición original */
+  }
+}
+
+/* Sección Skills */
+
+
+/* Animación para la sección Skills */
+@keyframes fadeInUpSkills {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sección Skills */
+.skills-section {
+  padding: 1rem 0; /* Reduce el espacio de padding */
+  color: #ffffff;
+  width: 100%;
+  min-height: 30vh;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  animation: fadeInUpSkills 1.5s ease-in-out; /* Animación para la sección */
+}
+
+/* Separador de Skills */
+.skills-separator-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  animation: separatorAnimation 1s ease-in-out;
+}
+
+.skills-separator {
+  width: 80%;
+  height: 2px;
+  background-color: rgba(180, 180, 180, 0.3);
+  opacity: 1;
+  margin-bottom: 1rem;
+}
+
+/* Contenedor principal de Skills */
+.skills-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUpSkills 1.5s ease-in-out; /* Animación */
+
+  padding: 1rem; /* Reduce el padding dentro del contenedor */
+}
+
+/* Título de la sección */
+.skills-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor de los íconos de Skills */
+.skills-container {
+  display: flex;
+  flex-wrap: nowrap; /* Esto evita que las skills pasen a una nueva fila */
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.skill-item {
+  width: 80px; /* Ajusta según el tamaño deseado */
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.iconSkills {
+  width: 4em; /* Ajusta el tamaño de los íconos si es necesario */
+  height: 4em;
+  margin: 0.5rem; /* Ajusta el margen entre íconos */
+  transition: transform 0.3s ease;
+}
+
+/* Efecto de hover */
+.skill-item:hover {
+  transform: scale(1.1);
+}
+
+.skill-item:hover .iconSkills {
+  transform: scale(1.2);
+}
+
+/* Nombre de la habilidad */
+.skill-name {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-item:hover .skill-name {
+  opacity: 1;
+}
+
+
+
+/* seccion about */
+
+/* Animación para la sección About y sus elementos */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Comienza más abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Llega a su posición original */
+  }
+}
+
+/* Animación para el separador */
+@keyframes separatorAnimation {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 80%;
+    opacity: 1;
+  }
+}
+
+/* Sección About */
+.about-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Separador arriba con animación */
+.about-separator-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  animation: separatorAnimation 1s ease-in-out; /* Animación para el separador */
+}
+
+.about-separator {
+  width: 80%;
+  height: 2px;
+  background-color: rgba(180, 180, 180, 0.3); /* Color claro para que sea sutil */
+  opacity: 1;
+  margin-bottom: 1rem;
+}
+
+/* Contenedor de la sección About */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  animation: fadeInUp 1.5s ease-in-out; /* Animación para el contenedor */
+}
+
+/* Imagen redondeada con animación */
+.about-profile .about-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(180, 180, 180, 0.3);
+  animation: fadeInUp 1.5s ease-in-out; /* Animación para la imagen */
+}
+
+/* Contenido de la sección */
+.about-content {
+  max-width: 650px;
+  margin-left: 2rem;
+  flex: 1;
+  animation: fadeInUp 1.5s ease-in-out; /* Animación para el texto */
+}
+
+/* Títulos y párrafos */
+.about-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.about-intro,
+.about-education,
+.about-experience,
+.about-goals {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+
+/* iconos about */ 
+
+.about-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.social-icon {
+  font-size: 2.5rem;
+  color: #000000; /* Color para LinkedIn */
+  transition: transform 0.3s;
+}
+.social-icon-git {
+  font-size: 2.5rem;
+  color: #000000; /* Color para LinkedIn */
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  color: #0077b5; /* Color de hover */
+}
+.social-icon-git:hover {
+  transform: scale(1.1);
+  color: #e4e4e4; /* Color de hover */
+}
+
+/* footer icons  */
+.social-icon-footer {
+  font-size: 2.5rem;
+  color: #ececec; /* Color para LinkedIn */
+  transition: transform 0.3s;
+}
+
+.social-icons-fclk-footer:hover {
+  transform: scale(1.1);
+  color: #0077b5; /* Color de hover */
+}
+.social-icon-git-footer:hover {
+  transform: scale(1.1);
+  color: #6b6b6b; /* Color de hover */
+}
+
+.download-button {
+  padding: 0.5rem 1.2rem;
+  background-color: #4CAF50; /* Verde para el botón */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #45a049;
+}
+
+
+/* seccion proyectos  */
+
+.projects-separator {
+  width: 80%;
+  height: 2px;
+  background-color: rgba(180, 180, 180, 0.3); /* Color claro para que sea sutil */
+  opacity: 1;
+  margin-bottom: 1rem;
+}
+/* Estilos para la sección de proyectos */
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Espaciado entre tarjetas */
+  padding: 0 20px; /* Espaciado interno en los lados */
+}
+
+.project-card {
+  display: grid; /* Organiza imagen y contenido */
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: linear-gradient(45deg, #314c4f, #3f6867); /* Colores azul-verde */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Bordes sutiles */
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s; /* Animación sutil al pasar el mouse */
+}
+
+.project-card:hover {
+  transform: scale(1.02); /* Pequeño aumento al pasar el mouse */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+}
+
+.projects-container {
+  padding: 0 20px;
+  gap: 40px;
+}
+
+.project-card img {
+  border-radius: 8px;
+}
+
+
+.project-card:nth-child(even) {
+  grid-template-columns: 1fr 1fr; /* Mantiene el diseño en dos columnas */
+  direction: rtl; /* Cambia la dirección visual para alternar */
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  justify-self: center; /* Centra horizontalmente la imagen */
+}
+
+.project-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-card a {
+  color: #00aaff;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.projects-section {
+  padding: 40px 20px; /* Espaciado interno general */
+  justify-items: center;
+}
+.projects-section h2 {
+  padding: 40px 0px; /* Espaciado interno general */
+
+}
