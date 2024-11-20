@@ -15,7 +15,7 @@ const Main = () => {
             {/* <div className='col-6 d-flex justify-content-center align-items-center'>
               <img src={img} alt='' className='imgMain' />
             </div> */}
-            <div className='col-6 d-flex flex-column justify-content-center align-items-center'>
+            <div className='d-flex flex-column justify-content-center align-items-center '>
               <TypewriterExample/>
               <h1 className='nameTitle text-white'>Soy Matías Bordenave!</h1>
               <h2 className='text-white'>Programador Full Stack</h2>

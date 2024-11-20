@@ -31,7 +31,7 @@ const About = () => {
         <div className="about-profile">
           <img src={yo} alt="Matías Bordenave" className="about-image" />
         </div>
-        <div className="about-content">
+        <div className="about-content m-auto">
           <h2 className="about-title">Sobre Mí</h2>
           <p className="about-intro">
             Soy Matías Bordenave, desarrollador web apasionado por crear soluciones innovadoras. Me gusta trabajar tanto en el frontend como en el backend, buscando siempre crear aplicaciones funcionales y fáciles de usar.
