@@ -1,6 +1,5 @@
 import React from 'react';
 import cSharp from "../assets/csharp.svg";
-import python from "../assets/python.svg";
 import react from "../assets/react.svg";
 import javascript from "../assets/javascript.svg";
 import nodejs from "../assets/node.png";
@@ -19,7 +18,6 @@ const Skills = () => {
     { src: bootstrap, alt: 'Bootstrap' },
     { src: react, alt: 'React' },
     { src: nodejs, alt: 'NodeJS' },
-    { src: python, alt: 'Python' },
     { src: cSharp, alt: 'C#' },
     { src: mysql, alt: 'MySQL' },
     { src: sqlserver, alt: 'SQL Server' },
