@@ -1,4 +1,5 @@
 import About from './components/About'
+import Contacto from './components/Contacto'
 import Footer from './components/Footer'
 import Main from './components/Main'
 import Navbar from './components/Navbar'
@@ -15,6 +16,7 @@ function App() {
       <About/>
       <Skills/>
       <Proyectos/>
+      <Contacto/>
       <Footer/>
     </>
   )

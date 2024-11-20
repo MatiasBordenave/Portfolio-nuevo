@@ -46,14 +46,14 @@ const About = () => {
             Mi objetivo es seguir aprendiendo y mejorando mis habilidades para contribuir a proyectos de tecnología que impacten positivamente.
           </p>
           <div className="about-links d-flex align-items-center">
-          <a href="https://linkedin.com/in/tuPerfil" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/matias-federico-bordenave-221986251/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedin className="social-icon" />
           </a>
-          <a href="https://github.com/tuPerfil" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/MatuqE" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub className="social-icon-git" />
           </a>
-          <a href="/path/to/cv.pdf" download className="download-button" aria-label="Descargar CV">
-            Descargar CV
+          <a href="https://drive.google.com/file/d/1poU5sp2l1Ngz0mtt6V9S915KRjaOviS7/view" target='_blank' download className="download-button" aria-label="Ver CV">
+            Ver CV
           </a>
         </div>
         </div>

@@ -4,8 +4,10 @@ import projects from '../data/proyectos';
 const Proyectos = () => {
   return (
     <div>
+      <div className='projects-separator-wrapper'>
 
-      <div className="projects-separator m-auto"></div> {/* Separador */}
+        <div className="projects-separator m-auto"></div> {/* Separador */}
+      </div>
 
       <section id="proyectos" className="projects-section text-white ">
         <h2>Mis Proyectos</h2>
@@ -16,7 +18,7 @@ const Proyectos = () => {
               <div className="project-card-content">
                 <h3>{project.name}</h3>
                 <p>{project.description}</p>
-                <p>Lenguajes: {project.languages.join(", ")}</p>
+                <p>{project.languages.join(", ")}</p>
                 <a href={project.url} target="_blank" rel="noopener noreferrer">
                   Ver Proyecto
                 </a>

@@ -1,5 +1,6 @@
 import giftApp from '../assets/giftApp.png'
 
+
 const proyectos = [
     {
       id: 1,
@@ -8,15 +9,18 @@ const proyectos = [
       languages: ["HTML", "CSS", "React"],
       url: "https://gifs-expert-matuqe.netlify.app/",
       github: "https://github.com/MatuqE/giftApp",
-      image: giftApp, 
+      image: giftApp,
+      deployed: true
     },
     {
       id: 2,
-      name: "Mi Proyecto 2",
+      name: "Web Dentista",
       description: "Descripción breve del proyecto 2.",
       languages: ["React", "Node.js"],
       url: "https://proyecto2.com",
-      github: "https://github.com/usuario/proyecto2"
+      github: "https://github.com/usuario/proyecto2",
+      image: giftApp,
+      deployed: false
     },
     {
       id: 3,
