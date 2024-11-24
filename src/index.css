@@ -506,17 +506,39 @@ li{
 }
 
 .project-card {
-  display: grid; /* Organiza imagen y contenido */
+  display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  background: linear-gradient(45deg, #314c4f, #3f6867); /* Colores azul-verde */
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Bordes sutiles */
+  background: linear-gradient(45deg, #314c4f, #3f6867);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   padding: 20px;
-  width: 100%;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   color: white;
-  transition: transform 0.3s, box-shadow 0.3s; /* Animación sutil al pasar el mouse */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.project-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+
+
+.project-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify; /* Alinea el texto de la descripción de manera uniforme */
 }
 
 .project-card:hover {
@@ -536,7 +558,6 @@ li{
 
 .project-card:nth-child(even) {
   grid-template-columns: 1fr 1fr; /* Mantiene el diseño en dos columnas */
-  direction: rtl; /* Cambia la dirección visual para alternar */
 }
 
 .project-card img {
@@ -545,12 +566,7 @@ li{
   justify-self: center; /* Centra horizontalmente la imagen */
 }
 
-.project-card-content {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
 
 .project-card a {
   color: #00aaff;
@@ -569,6 +585,12 @@ li{
 .projects-section h2 {
   padding: 40px 0px; /* Espaciado interno general */
 
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    grid-template-columns: 1fr; /* Para pantallas pequeñas, las tarjetas se apilan verticalmente */
+  }
 }
 
 

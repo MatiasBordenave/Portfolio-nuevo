@@ -7,6 +7,11 @@ import mrLomo4 from '../assets/mr-lomo/mrLomo4.png'
 import mrLomo5 from '../assets/mr-lomo/mrLomo5.png'
 import mrLomo6 from '../assets/mr-lomo/mrLomo6.png'
 
+import layaya1 from '../assets/laYayaApp/layaya1.png'
+import layaya2 from '../assets/laYayaApp/layaya2.png'
+import layaya3 from '../assets/laYayaApp/layaya3.png'
+import layaya4 from '../assets/laYayaApp/layaya4.png'
+import layaya5 from '../assets/laYayaApp/layaya5.png'
 
 const proyectos = [
     {
@@ -27,7 +32,7 @@ const proyectos = [
       url: "https://proyecto2.com",
       github: "https://github.com/usuario/proyecto2",
       image: giftApp,
-      deployed: false
+      deployed: true
     },
     {
       id: 3,
@@ -36,16 +41,18 @@ const proyectos = [
       languages: ["HTML", "CSS", "React"],
       url: "https://gifs-expert-matuqe.netlify.app/",
       github: "https://github.com/MatuqE/giftApp",
-      image: giftApp, 
+      image: giftApp,       
       deployed: true
     },
     {
       id: 4,
-      name: "Mi Proyecto 2",
-      description: "Descripción breve del proyecto 2.",
-      languages: ["React", "Node.js"],
-      url: "https://proyecto2.com",
-      github: "https://github.com/usuario/proyecto2"
+      name: "La Yaya App",
+      description: "Esta App fue realizada con <strong>C#</strong> para gestionar productos y menús personalizables para adultos y niños, calcula el presupuesto total y las ganancias estimadas, y permite generar reportes en imagen o impresión. También incluye validaciones para evitar datos no válidos.",
+      languages: ["C#"],
+      url: "",
+      github: "https://github.com/MatuqE/La-Yaya-Eventos-App",
+      image: [ layaya1, layaya2, layaya3, layaya4, layaya5 ], 
+      deployed: false
     },
     // Agrega más proyectos aquí
   ];
