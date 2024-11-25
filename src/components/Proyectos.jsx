@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import projects from "../data/proyectos";
 import ImageCarousel from './ImageCarousel'
 
@@ -19,6 +19,7 @@ const Proyectos = () => {
           >
             {project.id % 2 === 0 ? (
               <>
+                <Suspense fallback={<div>Loading...</div>}>
                 <div className="project-card-content">
                   <h3 className="" >{project.name}</h3>
                   <p className="" dangerouslySetInnerHTML={{ __html: project.description }}></p>
@@ -36,10 +37,13 @@ const Proyectos = () => {
 
                 </div>
                 <ImageCarousel images={project.image} name={project.name} />
+                </Suspense>
               </>
               
             ) : (
               <>
+              
+              <Suspense fallback={<div>Loading...</div>}>
                 <ImageCarousel images={project.image} name={project.name} />
                 <div className="project-card-content">
                   <h3>{project.name}</h3>
@@ -54,6 +58,7 @@ const Proyectos = () => {
                     Ver en GitHub
                   </a>
                 </div>
+                </Suspense>
               </>
             )}
           </div>
