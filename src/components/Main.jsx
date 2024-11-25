@@ -12,15 +12,13 @@ const Main = () => {
       >
         <div className='divBg d-flex justify-content-center align-items-center vh-100'>
           
-            {/* <div className='col-6 d-flex justify-content-center align-items-center'>
-              <img src={img} alt='' className='imgMain' />
-            </div> */}
+ 
             <div className='d-flex flex-column justify-content-center align-items-center '>
               <TypewriterExample/>
               <h1 className='nameTitle text-white'>Soy Matías Bordenave!</h1>
               <h2 className='text-white'>Programador Full Stack</h2>
 
-              {/* Typewriter effect for "Hola Mundo!" */}
+
             </div>
           
         </div>
