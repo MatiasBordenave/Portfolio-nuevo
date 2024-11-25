@@ -683,7 +683,7 @@ button {
   display: block;
   width: 100%;
   padding: 15px;
-  background-color: #42a5f5; /* Azul claro */
+  background-color: #007BFF; /* Azul claro */
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -694,7 +694,7 @@ button {
 }
 
 button:hover {
-  background-color: #1e88e5; /* Azul más oscuro cuando se pasa el mouse */
+  background-color: #0056b3; /* Azul más oscuro cuando se pasa el mouse */
 }
 
 .status-message {

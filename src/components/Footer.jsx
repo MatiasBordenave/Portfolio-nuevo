@@ -1,31 +1,54 @@
-import React from 'react'
+import React from 'react';
 
-import { FaLinkedin, FaGithub, FaFacebookSquare  } from 'react-icons/fa'; // Importa los iconos
+import { FaLinkedin, FaGithub, FaFacebookSquare } from 'react-icons/fa'; // Importa los iconos
 
 const Footer = () => {
   return (
-    <div className='footer'>
-    <div className=''>
-      {/* Nombre a la izquierda */}
-      <div className='footer_copyR'>
-        <p>Matias Bordenave</p>
-      </div>
+    <div className="footer">
+      <div>
+        {/* Nombre a la izquierda */}
+        <div className="footer_copyR">
+          <p>Matias Bordenave</p>
+        </div>
 
-      {/* Copyright en el centro */}
-      <div className='footer_copyR center'>
-        <p>© Copyright 2023. Made by Matias Bordenave.</p>
-      </div>
+        {/* Copyright en el centro */}
+        <div className="footer_copyR center">
+          <p>© Copyright 2023. Made by Matias Bordenave.</p>
+        </div>
 
-      {/* Redes sociales a la derecha */}
-      <div className='col-12 bg-darkk justify-content-end d-flex footer_media'>
-                  <a className='bg-darkk' href="https://www.linkedin.com/in/matias-bordenave-221986251/" target='_blank'><FaLinkedin className="social-icons-fclk-footer social-icon-footer" /></a>
-                  <a className='bg-darkk' href="https://github.com/MatuqE" target='_blank'><FaGithub className="social-icon-git-footer social-icon-footer" /></a>
-                  <a className='bg-darkk' href="https://github.com/MatuqE" target='_blank'><FaFacebookSquare className="social-icons-fclk-footer social-icon-footer"/></a>
+        {/* Redes sociales a la derecha */}
+        <div className="col-12 bg-darkk justify-content-end d-flex footer_media">
+          <a 
+            className="bg-darkk" 
+            href="https://www.linkedin.com/in/matias-bordenave-221986251/" 
+            target="_blank" 
+            aria-label="LinkedIn Profile" 
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin className="social-icons-fclk-footer social-icon-footer" />
+          </a>
+          <a 
+            className="bg-darkk" 
+            href="https://github.com/MatuqE" 
+            target="_blank" 
+            aria-label="GitHub Profile" 
+            rel="noopener noreferrer"
+          >
+            <FaGithub className="social-icon-git-footer social-icon-footer" />
+          </a>
+          <a 
+            className="bg-darkk" 
+            href="https://github.com/MatuqE" 
+            target="_blank" 
+            aria-label="Facebook Profile" 
+            rel="noopener noreferrer"
+          >
+            <FaFacebookSquare className="social-icons-fclk-footer social-icon-footer" />
+          </a>
+        </div>
       </div>
     </div>
-  </div>
+  );
+};
 
-  )
-}
-
-export default Footer
+export default Footer;
