@@ -13,6 +13,12 @@ import layaya3 from '../assets/laYayaApp/layaya3.png'
 import layaya4 from '../assets/laYayaApp/layaya4.png'
 import layaya5 from '../assets/laYayaApp/layaya5.png'
 
+import dentista1 from '../assets/webDentista/dentista1.png'
+import dentista2 from '../assets/webDentista/dentista2.png'
+import dentista3 from '../assets/webDentista/dentista3.png'
+import dentista4 from '../assets/webDentista/dentista4.png'
+
+
 const proyectos = [
     {
       id: 1,
@@ -27,11 +33,11 @@ const proyectos = [
     {
       id: 2,
       name: "Web Dentista",
-      description: "Descripción breve del proyecto 2.",
-      languages: ["React", "Node.js"],
-      url: "https://proyecto2.com",
-      github: "https://github.com/usuario/proyecto2",
-      image: giftApp,
+      description: "Esta web la desarrollé como proyecto de mi facultad en grupo, para la gestión de clínicas dentales. Incluye login, registro y funcionalidades <strong>CRUD</strong> para dentistas, pacientes, turnos e historiales. Utilicé <strong>React</strong> para el frontend, <strong>NodeJS</strong> para el backend y <strong>MySql</strong> como base de datos.",
+      languages: ["HTML", "CSS", "React", "NodeJS", "MySQL"],
+      url: "https://web-dentista-simple.vercel.app/",
+      github: "https://github.com/MatuqE/WebDentistaSimple",
+      image: [ dentista1, dentista2, dentista3, dentista4 ],
       deployed: true
     },
     {
