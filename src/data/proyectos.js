@@ -18,11 +18,17 @@ import dentista2 from '../assets/webDentista/dentista2.png'
 import dentista3 from '../assets/webDentista/dentista3.png'
 import dentista4 from '../assets/webDentista/dentista4.png'
 
+import hospital1 from '../assets/web-Hospital/hospital1.png'
+import hospital2 from '../assets/web-Hospital/hospital2.png'
+import hospital3 from '../assets/web-Hospital/hospital3.png'
+import hospital4 from '../assets/web-Hospital/hospital4.png'
+import hospital5 from '../assets/web-Hospital/hospital5.png'
+
 
 const proyectos = [
     {
       id: 1,
-      name: "Sangucheria Mr-Lomo",
+      name: "Sangucheria",
       description: "Desarrollado como un proyecto de la facultad, esta aplicación fue construida con <strong> React, Node.js y MySQL </strong> para un restaurante de comidas rápidas. Permite gestionar productos, ventas, historial de ventas, productos más vendidos y administrar la caja. Además, se trabajó directamente con el cliente aplicando metodologías ágiles como <strong>SCRUM</strong>.",
       languages: ["HTML", "CSS", "React", "NodeJS", "MySQL"],
       url: "https://mr-lomo-simple.netlify.app/",
@@ -52,6 +58,16 @@ const proyectos = [
     },
     {
       id: 4,
+      name: "Web Hospital San Pablo",
+      description: "Esta web fue creada para mis prácticas en la UTN, destinada al Hospital de San Pablo. Permite a los usuarios informarse sobre noticias médicas, horarios de atención por orden de llegada, y horarios de los CAPS de la red hospitalaria.",
+      languages: ["HTML", "CSS", "React", "NodeJS", "MySQL"],
+      url: "",
+      github: "https://github.com/MatuqE/Web-Hospital-SP",
+      image: [ hospital1, hospital2, hospital3, hospital4, hospital5 ],       
+      deployed: false
+    },
+    {
+      id: 5,
       name: "La Yaya App",
       description: "Esta App fue realizada con <strong>C#</strong> para gestionar productos y menús personalizables para adultos y niños, calcula el presupuesto total y las ganancias estimadas, y permite generar reportes en imagen o impresión. También incluye validaciones para evitar datos no válidos.",
       languages: ["C#"],
@@ -60,7 +76,6 @@ const proyectos = [
       image: [ layaya1, layaya2, layaya3, layaya4, layaya5 ], 
       deployed: false
     },
-    // Agrega más proyectos aquí
   ];
   
   export default proyectos;

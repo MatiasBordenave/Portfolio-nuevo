@@ -37,7 +37,7 @@ const About = () => {
             Soy Matías Bordenave, desarrollador web apasionado por crear soluciones innovadoras. Me gusta trabajar tanto en el frontend como en el backend, buscando siempre crear aplicaciones funcionales y fáciles de usar.
           </p>
           <p className="about-education">
-            Estudié  <strong> Tecnicatura univercitaria en Programacion </strong> en <strong>La Universidad Tecnológica Nacional - Facultad Regional Tucumán </strong> y tengo experiencia trabajando con tecnologías como HTML, CSS, JavaScript, React, Node.js, C#, Python y bases de datos como MySQL y SQL Server.
+            Estudié  <strong> Tecnicatura univercitaria en Programacion </strong> en <strong>La Universidad Tecnológica Nacional - Facultad Regional Tucumán </strong> y tengo experiencia trabajando con tecnologías como <strong> HTML, CSS, JavaScript, React, Node.js, C#, Python </strong>y bases de datos como <strong> MySQL y SQL Server.</strong>
           </p>
           <p className="about-experience">
             He trabajado en la creación de proyectos web tanto personales como en equipo, mejorando mis habilidades en cada paso.
