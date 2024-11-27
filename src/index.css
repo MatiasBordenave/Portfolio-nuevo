@@ -446,6 +446,7 @@ li{
   transform: scale(1.1);
   color: #0077b5; /* Color de hover */
 }
+
 .social-icon-git:hover {
   transform: scale(1.1);
   color: #e4e4e4; /* Color de hover */
@@ -456,6 +457,10 @@ li{
   font-size: 2.5rem;
   color: #ececec; /* Color para LinkedIn */
   transition: transform 0.3s;
+}
+.social-icon-whatsapp-footer:hover{
+  transform: scale(1.1);
+  color: #0ab304; /* Color de hover */
 }
 
 .social-icons-fclk-footer:hover {
@@ -518,6 +523,19 @@ li{
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.project-card-mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  background: linear-gradient(45deg, #314c4f, #3f6867);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
 
 .project-card img {
   max-width: 100%;
@@ -533,22 +551,9 @@ li{
 }
 
 
-.project-card-content {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: justify; /* Alinea el texto de la descripción de manera uniforme */
-}
-
 .project-card:hover {
   transform: scale(1.02); /* Pequeño aumento al pasar el mouse */
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
-}
-
-.projects-container {
-  padding: 0 20px;
-  gap: 40px;
 }
 
 .project-card img {
@@ -587,11 +592,17 @@ li{
 
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 1068px) {
   .project-card {
-    grid-template-columns: 1fr; /* Para pantallas pequeñas, las tarjetas se apilan verticalmente */
+    flex-direction: column; /* Cambia la disposición para pantallas móviles */
+  }
+
+  .project-card-content {
+    text-align: center; /* Centra el texto si es necesario */
   }
 }
+
 
 
 /*  seccion contacto  */

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FaLinkedin, FaGithub, FaFacebookSquare } from 'react-icons/fa'; // Importa los iconos
+import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa'; // Importa los iconos
 
 const Footer = () => {
   return (
@@ -36,14 +36,14 @@ const Footer = () => {
           >
             <FaGithub className="social-icon-git-footer social-icon-footer" />
           </a>
-          <a 
-            className="bg-darkk" 
-            href="https://github.com/MatuqE" 
-            target="_blank" 
-            aria-label="Facebook Profile" 
+          <a
+            className="bg-darkk"
+            href="https://wa.me/5493814016226" // Reemplaza con tu número
+            target="_blank"
+            aria-label="WhatsApp Contact"
             rel="noopener noreferrer"
           >
-            <FaFacebookSquare className="social-icons-fclk-footer social-icon-footer" />
+            <FaWhatsapp className="social-icon-whatsapp-footer social-icon-footer" />
           </a>
         </div>
       </div>

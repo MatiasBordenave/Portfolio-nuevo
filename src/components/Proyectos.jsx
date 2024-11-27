@@ -1,75 +1,39 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect } from "react";
 import projects from "../data/proyectos";
-import ImageCarousel from './ImageCarousel'
+import ProyectosMobile from "./ProyectosMobile";
+import ProyectosDesktop from "./ProyectosDesktop";
 
 const Proyectos = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detectar tamaño de pantalla
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Detectar tamaño inicial
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div>
       <div className="projects-separator-wrapper">
-        <div className="projects-separator m-auto"></div> {/* Separador */}
+        <div className="projects-separator m-auto"></div>
       </div>
 
-      <section id="proyectos" className="projects-section text-white ">
+      <section id="proyectos" className="projects-section text-white">
         <h2>Mis Proyectos</h2>
-        <div className="projects-container">
-          {projects.map((project, index) => (
-            <div
-            key={index}
-            className={`project-card ${project.id % 2 === 0 ? "left-to-right" : "right-to-left"}`}
-          >
-            {project.id % 2 === 0 ? (
-              <>
-                <Suspense fallback={<div>Loading...</div>}>
-                <div className="project-card-content">
-                  <h3 className="" >{project.name}</h3>
-                  <p className="" dangerouslySetInnerHTML={{ __html: project.description }}></p>
-                  <p className="justify-content-end d-flex"><strong>{project.languages.join(", ")}.</strong></p>
-
-                  {project.deployed && (
-                      <a href={project.url} target="_blank" rel="noopener noreferrer"  className="justify-content-end d-flex">
-                        Ver Proyecto
-                      </a>
-                    )}
-                    
-                      <a href={project.github} target="_blank" rel="noopener noreferrer"  className="justify-content-end d-flex">
-                        Ver en GitHub
-                      </a>
-
-                </div>
-                <ImageCarousel images={project.image} name={project.name} />
-                </Suspense>
-              </>
-              
-            ) : (
-              <>
-              
-              <Suspense fallback={<div>Loading...</div>}>
-                <ImageCarousel images={project.image} name={project.name} />
-                <div className="project-card-content">
-                  <h3>{project.name}</h3>
-                  <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
-                  <p><strong>{project.languages.join(", ")}.</strong></p>
-                  {project.deployed && (
-                    <a href={project.url} target="_blank" rel="noopener noreferrer">
-                      Ver Proyecto
-                    </a>
-                  )}
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
-                    Ver en GitHub
-                  </a>
-                </div>
-                </Suspense>
-              </>
-            )}
-          </div>
-          
-          ))}
-        </div>
+        {isMobile ? (
+          <ProyectosMobile projects={projects} />
+        ) : (
+          <ProyectosDesktop projects={projects} />
+        )}
       </section>
     </div>
   );
 };
-
-
 
 export default Proyectos;

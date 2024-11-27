@@ -2,7 +2,7 @@
 import yo from '../assets/yo.jpg'
 import React, { useEffect, useRef } from 'react';
 
-import { FaLinkedin, FaGithub } from 'react-icons/fa'; // Importa los iconos
+import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa'; // Importa los iconos
 
 const About = () => {
 
@@ -51,6 +51,15 @@ const About = () => {
           </a>
           <a href="https://github.com/MatuqE" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub className="social-icon-git" />
+          </a>
+          <a
+            className=""
+            href="https://wa.me/5493814016226"
+            target="_blank"
+            aria-label="WhatsApp Contact"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp className="social-icon-whatsapp-footer social-icon"/>
           </a>
           <a href="https://drive.google.com/file/d/1poU5sp2l1Ngz0mtt6V9S915KRjaOviS7/view" target='_blank' download className="download-button" aria-label="Ver CV">
             Ver CV
