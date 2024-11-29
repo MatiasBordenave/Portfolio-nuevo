@@ -2,12 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.navbar-fixed {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000; /* Asegura que quede encima de otros elementos */
-}
 
 body {
   background: linear-gradient(45deg, #0b1416, #11292c, #1a3d41, #0f0f0f);
@@ -16,8 +10,8 @@ body {
 }
 
 
-  @keyframes gradientAnimation {
-    0% {
+@keyframes gradientAnimation {
+  0% {
       background-position: 0% 50%;
     }
     50% {
@@ -39,34 +33,80 @@ body {
       height: 20em; /* Reduce el tamaño en pantallas más pequeñas */
     }
   }
-  
-  .divNav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-  }
-  
-  @media (max-width: 768px) {
-    .divNav ul {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0;
-    }
-    .divNav li {
-      padding: 0.5em 0;
-    }
-  }
-  
-ul{
+  /* Estilo para el navbar */
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Siempre encima */
+}
+
+.divNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
-a{
-  text-decoration: none;
-}
-li{
+
+li {
   padding-left: 1em;
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Botón hamburguesa (solo visible en móviles) */
+.hamburger-menu {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  height: 1.5em;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: none; /* Oculta el menú inicialmente */
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Aparece debajo del navbar */
+    left: 0;
+    width: 100%;
+    background: #333; /* Fondo oscuro para el menú */
+    padding: 1rem 0;
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    display: flex; /* Muestra el menú al abrir */
+  }
+
+  ul {
+    flex-direction: column; /* Alinea los enlaces verticalmente */
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  li {
+    padding: 0.5rem 1rem;
+  }
+}
+
 
 
  /* footer */

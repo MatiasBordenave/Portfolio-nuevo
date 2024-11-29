@@ -5,7 +5,7 @@ const TypewriterExample = () => {
   const [text] = useTypewriter({
     words: ['Hola Mundo!', '¡Bienvenido a mi portafolio!'],
     loop: true,
-    delay: 1500,
+    delay: 1200,
   });
 
   return (
