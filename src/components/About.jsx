@@ -61,7 +61,7 @@ const About = () => {
           >
             <FaWhatsapp className="social-icon-whatsapp-footer social-icon"/>
           </a>
-          <a href="https://drive.google.com/file/d/1poU5sp2l1Ngz0mtt6V9S915KRjaOviS7/view" target='_blank' download className="download-button" aria-label="Ver CV">
+          <a href="https://drive.google.com/file/d/1VIKRts7CAW5tR5-0gBW06cVyFT54EKrV/view" target='_blank' download className="download-button" aria-label="Ver CV">
             Ver CV
           </a>
         </div>
