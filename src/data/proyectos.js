@@ -24,6 +24,14 @@ import hospital3 from '../assets/web-Hospital/hospital3.png'
 import hospital4 from '../assets/web-Hospital/hospital4.png'
 import hospital5 from '../assets/web-Hospital/hospital5.png'
 
+import appMecanica from '../assets/appMecanica/appMecanica.png'
+import appMecanica1 from '../assets/appMecanica/appMecanica1.png'
+import appMecanica2 from '../assets/appMecanica/appMecanica2.png'
+import appMecanica3 from '../assets/appMecanica/appMecanica3.png'
+import appMecanica4 from '../assets/appMecanica/appMecanica4.png'
+import appMecanica5 from '../assets/appMecanica/appMecanica5.png'
+
+
 
 const proyectos = [
     {
@@ -74,6 +82,16 @@ const proyectos = [
       url: "",
       github: "https://github.com/MatuqE/La-Yaya-Eventos-App",
       image: [ layaya1, layaya2, layaya3, layaya4, layaya5 ], 
+      deployed: false
+    },
+    {
+      id: 6,
+      name: "Ocaranza Mecanica",
+      description: "Esta aplicación de escritorio fue desarrollada en C# con Windows Forms y permite llevar un control completo del mantenimiento de vehículos. Está orientada a talleres mecánicos o personas que deseen registrar el historial de reparaciones y gastos de sus vehículos.  <strong>Toda la información se guarda localmente en una base de datos SQLite</strong>, lo que permite utilizar la aplicación sin necesidad de conexión a internet.",
+      languages: ["C#", "SQLite"],
+      url: "",
+      github: "https://github.com/MatuqE/AppMecanica",
+      image: [ appMecanica, appMecanica1, appMecanica2, appMecanica3, appMecanica4 ], 
       deployed: false
     },
   ];

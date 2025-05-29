@@ -59,6 +59,7 @@ const ProyectosDesktop = ({ projects }) => {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="aProyecto"
                     >
                       Ver Proyecto
                     </a>
@@ -67,6 +68,7 @@ const ProyectosDesktop = ({ projects }) => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="aProyecto"
                   >
                     Ver en GitHub
                   </a>

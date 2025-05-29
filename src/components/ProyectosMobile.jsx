@@ -14,11 +14,11 @@ const ProyectosMobile = ({ projects }) => {
               <strong>{project.languages.join(", ")}.</strong>
             </p>
             {project.deployed && (
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
+              <a href={project.url} target="_blank" rel="noopener noreferrer" className="aProyecto">
                 Ver Proyecto
               </a>
             )}
-            <a href={project.github} target="_blank" rel="noopener noreferrer">
+            <a href={project.github} target="_blank" rel="noopener noreferrer" className="aProyecto">
               Ver en GitHub
             </a>
           </div>

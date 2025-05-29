@@ -13,7 +13,7 @@ const About = () => {
       const aboutTop = aboutRef.current.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
       if (aboutTop < windowHeight) {
-        aboutRef.current.classList.add('visible');
+        aboutRef.current.classList.add('');
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -21,7 +21,7 @@ const About = () => {
   }, []);
 
   return (
-    <section ref={aboutRef} className="about-section text-white" id="about">
+    <section ref={aboutRef} className="about-section text-white visible" id="about">
       {/* Separador arriba */}
       <div className="about-separator-wrapper">
         <div className="about-separator"></div>
