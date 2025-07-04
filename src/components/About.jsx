@@ -46,7 +46,7 @@ const About = () => {
             Mi objetivo es seguir aprendiendo y mejorando mis habilidades para contribuir a proyectos de tecnología que impacten positivamente.
           </p>
           <div className="about-links d-flex align-items-center">
-          <a href="https://www.linkedin.com/in/matias-federico-bordenave-221986251/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/matias-federico-bordenave/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedin className="social-icon" />
           </a>
           <a href="https://github.com/MatuqE" target="_blank" rel="noopener noreferrer" aria-label="GitHub">

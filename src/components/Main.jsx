@@ -7,7 +7,7 @@ const Main = () => {
     <div className='container' id='inicio'>
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }} // Cambié a 1 para la opacidad
+        animate={{ opacity: 1 }} 
         transition={{ duration: 1.5 }}
       >
         <div className='divBg d-flex justify-content-center align-items-center vh-100'>

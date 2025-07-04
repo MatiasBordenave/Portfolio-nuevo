@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="col-12 bg-darkk justify-content-end d-flex footer_media">
           <a 
             className="bg-darkk" 
-            href="https://www.linkedin.com/in/matias-bordenave-221986251/" 
+            href="https://www.linkedin.com/in/matias-federico-bordenave/" 
             target="_blank" 
             aria-label="LinkedIn Profile" 
             rel="noopener noreferrer"
@@ -38,7 +38,7 @@ const Footer = () => {
           </a>
           <a
             className="bg-darkk"
-            href="https://wa.me/5493814016226" // Reemplaza con tu número
+            href="https://wa.me/5493814016226"
             target="_blank"
             aria-label="WhatsApp Contact"
             rel="noopener noreferrer"
