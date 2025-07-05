@@ -29,7 +29,7 @@ const Footer = () => {
           </a>
           <a 
             className="bg-darkk" 
-            href="https://github.com/MatuqE" 
+            href="https://github.com/MatiasBordenave" 
             target="_blank" 
             aria-label="GitHub Profile" 
             rel="noopener noreferrer"

@@ -49,7 +49,7 @@ const About = () => {
           <a href="https://www.linkedin.com/in/matias-federico-bordenave/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedin className="social-icon" />
           </a>
-          <a href="https://github.com/MatuqE" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/MatiasBordenave" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub className="social-icon-git" />
           </a>
           <a
