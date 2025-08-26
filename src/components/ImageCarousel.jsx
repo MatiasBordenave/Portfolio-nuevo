@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 
-const ImageCarousel = ({ images, name, index }) => {
+const ImageCarousel = ({ images, name }) => {
   
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,32 +42,17 @@ const ImageCarousel = ({ images, name, index }) => {
   // Mostrar imagen actual
   const currentImage = Array.isArray(images) ? images[currentIndex] : images;
 
-  // Agregar lógica para alternar la dirección de los botones
-  const isEven = index % 2 === 0; // Si el índice es par (0, 2, 4, etc.)
-
   return (
     <div
       className="image-carousel"
       onMouseEnter={() => setIsHovered(true)} // Cuando el ratón entra en la imagen
       onMouseLeave={() => setIsHovered(false)} // Cuando el ratón sale de la imagen
     >
-      <button
-        className={`carousel-btn prev ${isEven ? "flipped" : ""}`}
-        onClick={handlePrev}
-      >
-        {"<"}
-      </button>
       <img
         src={currentImage}
         alt={`${name} - ${currentIndex + 1}`}
         className="carousel-image"
       />
-      <button
-        className={`carousel-btn next ${isEven ? "flipped" : ""}`}
-        onClick={handleNext}
-      >
-        {">"}
-      </button>
     </div>
   );
 };

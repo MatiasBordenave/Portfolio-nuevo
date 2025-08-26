@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../styles/proyectos.css";
 import projects from "../data/proyectos";
 import ProyectosMobile from "./ProyectosMobile";
 import ProyectosDesktop from "./ProyectosDesktop";
