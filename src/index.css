@@ -7,20 +7,15 @@ body {
   background: linear-gradient(45deg, #0b1416, #11292c, #1a3d41, #0f0f0f);
   background-size: 300% 300%;
   animation: gradientAnimation 10s ease infinite;
+  color: #f7f7f7;
 }
 
 
 @keyframes gradientAnimation {
-  0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
   
   .imgMain {
     height: 35em;
@@ -45,7 +40,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
+  backdrop-filter: saturate(140%) blur(8px);
+  background: rgba(0,0,0,0.35);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 ul {
@@ -63,6 +61,22 @@ a {
   text-decoration: none;
   color: white;
 }
+
+/* Link hover underline animation */
+.divNav a {
+  position: relative;
+}
+.divNav a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: rgba(255,255,255,0.6);
+  transition: width 200ms ease;
+}
+.divNav a:hover:after { width: 100%; }
 
 /* Botón hamburguesa (solo visible en móviles) */
 .hamburger-menu {
@@ -112,13 +126,18 @@ a {
  /* footer */
  /* Asegura que el footer esté en el fondo de la página */
 .footer {
-  background-color: #000; /* Fondo negro */
-  color: white; /* Texto blanco */
-  padding: 10px 0;
-  bottom: 0; /* Asegura que quede al fondo */
+  background-color: #000;
+  color: white;
+  padding: 16px 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Para asegurarnos de que quede encima del contenido */
+  z-index: 1000;
+}
+
+/* Ensure footer icons share same base color */
+.footer .social-icon-footer {
+  color: #ececec !important;
 }
 
 
@@ -388,13 +407,22 @@ a {
 
 .about-section {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
 }
 
 .about-section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-section {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
 }
 
 
@@ -513,16 +541,19 @@ a {
 }
 
 .download-button {
-  padding: 0.5rem 1.2rem;
-  background-color: #4CAF50; /* Verde para el botón */
+  padding: 0.6rem 1.1rem;
+  background: rgba(255,255,255,0.12);
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   text-decoration: none;
-  transition: background-color 0.3s;
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
 }
 
 .download-button:hover {
-  background-color: #45a049;
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.28);
+  transform: translateY(-1px);
 }
 
 
@@ -624,7 +655,7 @@ a {
 }
 
 .projects-section {
-  padding: 40px 20px; /* Espaciado interno general */
+  padding: 40px 20px;
   justify-items: center;
 }
 .projects-section h2 {

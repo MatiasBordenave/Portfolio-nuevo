@@ -9,19 +9,26 @@ const About = () => {
   const aboutRef = useRef();
 
   useEffect(() => {
-    const handleScroll = () => {
-      const aboutTop = aboutRef.current.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      if (aboutTop < windowHeight) {
-        aboutRef.current.classList.add('');
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    if (!aboutRef.current) return;
+
+    const element = aboutRef.current;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            element.classList.add('visible');
+          }
+        });
+      },
+      { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.15 }
+    );
+
+    observer.observe(element);
+    return () => observer.unobserve(element);
   }, []);
 
   return (
-    <section ref={aboutRef} className="about-section text-white visible" id="about">
+    <section ref={aboutRef} className="about-section text-white" id="about">
       {/* Separador arriba */}
       <div className="about-separator-wrapper">
         <div className="about-separator"></div>
@@ -29,7 +36,7 @@ const About = () => {
       
       <div className="about-container">
         <div className="about-profile">
-          <img src={yo} alt="Matías Bordenave" className="about-image" />
+          <img src={yo} alt="Matías Bordenave" className="about-image" loading="lazy" />
         </div>
         <div className="about-content m-auto">
           <h2 className="about-title">Sobre Mí</h2>
