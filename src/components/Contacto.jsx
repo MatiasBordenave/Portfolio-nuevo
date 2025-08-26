@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import emailjs from 'emailjs-com';
 
 const Contacto = () => {
@@ -8,6 +8,12 @@ const Contacto = () => {
         message: '',
       });
       const [status, setStatus] = useState('');
+      
+      useEffect(() => {
+        if (!status) return;
+        const timeoutId = setTimeout(() => setStatus(''), 5000);
+        return () => clearTimeout(timeoutId);
+      }, [status]);
     
       const handleChange = (e) => {
         const { name, value } = e.target;
@@ -35,43 +41,49 @@ const Contacto = () => {
                 <div className='contacto-separator'></div>
             </div>
             <section id="contact" className="contact-section">
-            <h2>Contacto</h2>
-            <form onSubmit={handleSubmit} >
-                <div className="form-group">
-                <label htmlFor="name">Nombre:</label>
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                />
+              <h2>Contacto</h2>
+              <p className="contact-subtitle">¿Tienes una idea o proyecto? Hablemos.</p>
+              <form onSubmit={handleSubmit} className="contact-form">
+                <div className="form-grid">
+                  <div className="form-group">
+                    <label htmlFor="name">Nombre</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="email">Correo Electrónico</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
                 </div>
                 <div className="form-group">
-                <label htmlFor="email">Correo Electrónico:</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                />
-                </div>
-                <div className="form-group">
-                <label htmlFor="message">Mensaje:</label>
-                <textarea
+                  <label htmlFor="message">Mensaje</label>
+                  <textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
-                ></textarea>
+                    rows="5"
+                  ></textarea>
                 </div>
-                <button type="submit">Enviar Mensaje</button>
-            </form>
-            {status && <p className="status-message">{status}</p>}
+                <div className="form-actions">
+                  <button type="submit" className="btn btn-primary">Enviar Mensaje</button>
+                </div>
+              </form>
+              {status && <p className="status-message">{status}</p>}
             </section>
         </div>
       );
