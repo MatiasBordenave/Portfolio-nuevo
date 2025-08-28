@@ -8,6 +8,11 @@
     <meta name="robots" content="index, follow" />
     <meta name="keywords" content="Matias Bordenave, Matías Bordenave, Programador, Programador Web, Desarrollador Web, Portfolio, Portafolio, Matias Bordenave Portafolio, Matías Bordenave Programador, Matías Bordenave Programador Web" />
     <link rel="canonical" href="https://bordenave-matias-portfolio.vercel.app/" />
+    <!-- Preconnects + CSS preload to reduce blocking -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preload" as="style" href="/src/index.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
     <title>Portfolio Matias Bordenave</title>
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
