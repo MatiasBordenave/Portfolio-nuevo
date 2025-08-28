@@ -54,6 +54,8 @@ const ImageCarousel = ({ images, name }) => {
         className="carousel-image"
         loading="lazy"
         decoding="async"
+        width="1600"
+        height="900"
       />
     </div>
   );

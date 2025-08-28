@@ -870,8 +870,8 @@ a {
 
 .image-carousel {
   position: relative;
-  width: 100%; /* Ajustar según el diseño */
-  height: 300px; /* Ajustar según el diseño */
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Reserve space to avoid layout shifts */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -883,6 +883,12 @@ a {
   max-height: 100%;
   border-radius: 8px;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .image-carousel {
+    aspect-ratio: 16 / 10; /* Slightly taller on mobile for readability */
+  }
 }
 
 .carousel-btn {
