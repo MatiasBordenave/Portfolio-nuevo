@@ -9,7 +9,7 @@ const TypewriterExample = () => {
   });
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px', color: 'white' }}>
+    <div style={{ textAlign: 'center', marginTop: '50px', color: 'white', background: 'transparent', boxShadow: 'none', backdropFilter: 'none' }}>
       <h2>
         {text}
         <Cursor />

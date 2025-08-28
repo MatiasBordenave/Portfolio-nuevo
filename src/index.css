@@ -11,6 +11,30 @@ body {
 }
 
 
+
+/* Ensure hero section uses the same transparent background as the page */
+#inicio .divBg {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Ensure hero background stays consistent on small screens */
+@media (max-width: 760px) {
+  #inicio,
+  #inicio .container,
+  #inicio .divBg {
+    background: transparent !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
+
+
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -18,12 +42,7 @@ body {
 }
 
 /* Reduce background repaint work on mobile */
-@media (max-width: 768px) {
-  body {
-    animation: none;
-    background-size: cover;
-  }
-}
+
   
   .imgMain {
     height: 35em;
