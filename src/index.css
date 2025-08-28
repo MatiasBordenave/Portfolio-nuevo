@@ -16,6 +16,14 @@ body {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+/* Reduce background repaint work on mobile */
+@media (max-width: 768px) {
+  body {
+    animation: none;
+    background-size: cover;
+  }
+}
   
   .imgMain {
     height: 35em;
@@ -697,7 +705,7 @@ a {
 .contact-section {
   background: rgba(26, 61, 65, 0.65);
   padding: 32px 20px;
-  max-width: 860px;
+  max-width: 1200px; /* Match projects container/cards width */
   margin: 0 auto 5em auto;
   border-radius: 16px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
@@ -705,10 +713,11 @@ a {
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .contact-section {
-    max-width: 600px;
-    padding: 50px;
+    max-width: 860px; /* Slightly smaller on medium screens */
+    padding: 32px 28px; /* keep roomy interior */
+    margin: 0 auto 5em auto; /* center and prevent side overflow */
   }
 }
 
@@ -782,11 +791,64 @@ a {
   gap: 16px;
 }
 
-@media (min-width: 768px) {
+/* Responsive adjustments for small screens */
+@media (max-width: 480px) {
   .contact-section {
-    max-width: 860px;
+    padding: 16px 14px;
+    border-radius: 12px;
+    margin: 0 20px 3em 20px; /* match cards gutters on small */
+  }
+  .contact-section h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+  .contact-subtitle {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .form-group {
+    margin-bottom: 14px;
+  }
+  .form-group label {
+    font-size: 14px;
+  }
+  .form-group input,
+  .form-group textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+  .form-group textarea {
+    min-height: 110px;
+  }
+  .contact-form .form-actions .btn,
+  .contact-form .form-actions button {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+
+/* Align width with cards on small tablets/large phones */
+@media (min-width: 481px) and (max-width: 767px) {
+  .contact-section {
+    margin: 0 20px 3em 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-section h2 { font-size: 20px; }
+  .contact-subtitle { font-size: 13px; }
+  .form-group label { font-size: 13px; }
+  .form-group input,
+  .form-group textarea { font-size: 13px; }
+}
+
+@media (min-width: 1200px) {
+  .contact-section {
+    max-width: 1200px;
     padding: 40px 40px;
   }
+}
+@media (min-width: 768px) {
   .contact-form .form-grid {
     grid-template-columns: 1fr 1fr;
   }

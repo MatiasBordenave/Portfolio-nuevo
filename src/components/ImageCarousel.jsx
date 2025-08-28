@@ -52,6 +52,8 @@ const ImageCarousel = ({ images, name }) => {
         src={currentImage}
         alt={`${name} - ${currentIndex + 1}`}
         className="carousel-image"
+        loading="lazy"
+        decoding="async"
       />
     </div>
   );
